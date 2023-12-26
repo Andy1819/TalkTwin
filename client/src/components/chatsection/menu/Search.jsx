@@ -1,0 +1,52 @@
+
+import { Box, InputBase, styled } from '@mui/material';
+import { Search as SearchIcon } from '@mui/icons-material';
+
+const Component = styled(Box)`
+    background: #D7A1F9;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+`;
+
+const Wrapper = styled(Box)`
+    position: relative;
+    border-radius: 10px;
+    background-color: #f0f2f5;
+    margin: 0 13px;
+    width: 100%;
+`;
+
+const Icon = styled(Box)`
+    padding: 6px;
+    height: 100%;
+    position: absolute;
+`;
+      
+const InputField = styled(InputBase) `
+    width: 100%;
+    padding: 16px;
+    padding-left: 65px;
+    font-size: 18px;
+    height: 15px;
+    width: 100%;
+`;
+
+const Search = ({ setText }) => {
+
+    return (
+        <Component>
+            <Wrapper>
+                <Icon>
+                    <SearchIcon fontSize="small"/>
+                </Icon>
+                <InputField
+                    placeholder="Search..."
+                />
+            </Wrapper>
+        </Component>
+    )
+}
+
+export default Search;

@@ -8,7 +8,7 @@ const Menuopt = styled(MenuItem)`
     padding: 15px 60px 5px 24px;
 `;
 
-const Headermenu = () => {
+const Headermenu = ({ setdrawerOpen }) => {
 
     const [ open, setOpen ] = useState(null);
 
@@ -38,7 +38,7 @@ const Headermenu = () => {
                     horizontal: 'right',
                 }}
         >
-            <Menuopt onClick={handleClose}>Profile</Menuopt>
+            <Menuopt onClick={() => {handleClose(); setdrawerOpen(true); }}>Profile</Menuopt>
         </Menu>
         </>
     )

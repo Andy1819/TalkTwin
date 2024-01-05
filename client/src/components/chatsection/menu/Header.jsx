@@ -17,6 +17,7 @@ const Component = styled(Box)`
 
 const Wrapper = styled(Box) `
     margin-left: auto;
+    cursor:pointer;
     & > * {
         margin-left: 2px;
         padding: 8px;
@@ -31,7 +32,8 @@ const Wrapper = styled(Box) `
 const Image = styled('img') ({
     height: 40,
     width: 40,
-    borderRadius: '50%'
+    borderRadius: '50%',
+    cursor:'pointer'
 })
 
 const Header = () => {

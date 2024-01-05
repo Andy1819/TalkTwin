@@ -13,7 +13,7 @@ const Dividerr = styled(Divider)`
     margin: 0 0 0 70px;
 `
 
-const Conversation = () => {
+const Conversation = ({text}) => {
 
     const [users, setUsers] = useState([]);
 
@@ -22,10 +22,11 @@ const Conversation = () => {
     useEffect(() => {
         const fetchdata = async() => {
             let response = await getUsers();
-            setUsers(response);
+            const filterData = response.filter(user => user.name.toLowerCase().includes(text.toLowerCase()));
+            setUsers(filterData);
         }
         fetchdata();
-    },[]);
+    },[text]);
 
     return (
         <Component>

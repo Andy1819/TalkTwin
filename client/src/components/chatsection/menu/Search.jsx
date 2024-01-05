@@ -43,6 +43,7 @@ const Search = ({ setText }) => {
                 </Icon>
                 <InputField
                     placeholder="Search..."
+                    onChange={(e) => setText(e.target.value)}
                 />
             </Wrapper>
         </Component>

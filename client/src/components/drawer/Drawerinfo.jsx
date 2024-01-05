@@ -42,7 +42,7 @@ const Drawerinfo = ({ open, setopen }) => {
         >
 
             <Header>
-                <ArrowCircleLeftIcon onClick={() => setopen(false)} />
+                <ArrowCircleLeftIcon style={{ cursor: 'pointer' }} onClick={() => setopen(false)} />
                 <Text>Profile</Text>
             </Header>
             <Component>

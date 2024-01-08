@@ -25,8 +25,7 @@ const Inputfield = styled(InputBase)`
     font-size: 16px;
 `;
 
-const Footer = ({sendText, setValue, value}) => {
-
+const Footer = () => {
     return(
         <Container>
             <EmojiEmotionsOutlined />
@@ -34,9 +33,6 @@ const Footer = ({sendText, setValue, value}) => {
             <Search>
                 <Inputfield 
                     placeholder='Write here...'
-                    onChange={(e) => setValue(e.target.value)}
-                    onKeyDown={(e) => sendText(e)}
-                    value={value}
                 />
             </Search>
             <Mic />
